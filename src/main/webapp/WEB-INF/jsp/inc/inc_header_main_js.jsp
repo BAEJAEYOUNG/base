@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
+    $(function () {
 
         $(":text, :password, textarea").each(function() {
             $(this).attr("autocomplete", "off").attr("spellcheck", false);

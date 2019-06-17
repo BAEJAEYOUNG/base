@@ -22,7 +22,7 @@
 
         location.href = "/main";
 
-        $(document).ready(function(){
+        $(function(){
             console.log("jqeury started ~~~");
         });
 

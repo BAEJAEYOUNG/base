@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
+    $(function () {
 
         // console.log( "================  inc_header_page_js" );
 
