@@ -87,14 +87,15 @@
                 if(bRefresh) {
                     $('#tabFrm' + menuId).attr('src', menuObj.execCmd);
                 } else {
-                    if ($('#tabs').tabs('exists', menuObj.menuNm)){
-                        $('#tabs').tabs('select', menuObj.menuNm);
+                    var oTabs = $('#tabs');
+                    if (oTabs.tabs('exists', menuObj.menuNm)){
+                        oTabs.tabs('select', menuObj.menuNm);
                         if(bRefresh) {
                             $('#tabFrm' + menuObj.menuId).attr('src', menuObj.execCmd);
                         }
                     } else {
                         // menuObj.execCmd = "/html/blank.html"
-                        var content = '<iframe id="tabFrm' + menuObj.menuId + '" class="frameBox" frameborder="1" src="'+menuObj.execCmd+'" style="width:100%;height:100%;"></iframe>';
+                        var content = '<iframe id="tabFrm' + menuObj.menuId + '" class="frameBox" src="'+menuObj.execCmd+'" style="width:100%;height:100%;"></iframe>';
                         $('#tabs').tabs('add',{
                             title: menuObj.menuNm,
                             content:content,
@@ -119,7 +120,7 @@
 <body>
 <div class="wrap-main">
     <header id="main-header" class="wrap-logo" role="banner">
-        <div class="banner"><a href="javascript:goMain()"><img src="${contextPath}/image/main/logo01.png"></a></div>
+        <div class="banner"><a href="javascript:goMain()"><img src="${contextPath}/image/main/logo01.png" alt="로고"></a></div>
         <div class="login-info">
             <span class="welcome"><spring:message code="main.welcome"/></span>
             &nbsp;
